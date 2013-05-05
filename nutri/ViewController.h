@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+- (IBAction)authButtonAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *authButton;
 
 @end

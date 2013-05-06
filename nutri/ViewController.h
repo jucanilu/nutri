@@ -11,5 +11,6 @@
 @interface ViewController : UIViewController
 - (IBAction)authButtonAction:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *authButton;
+@property (weak, nonatomic) IBOutlet UIButton *inbutton;
 
 @end

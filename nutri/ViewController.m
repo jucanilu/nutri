@@ -58,9 +58,14 @@
 }
 - (void)sessionStateChanged:(NSNotification*)notification {
     if (FBSession.activeSession.isOpen) {
-        [self.authButton setTitle:@"Logout" forState:UIControlStateNormal];
+        
+        [self.inbutton setTitle:@"Welcome to nutri, now click on the screeen to share your diets and tips." forState:UIControlStateNormal];
+        [self.authButton setTitle:@"logout" forState:UIControlStateNormal];
+        
     } else {
-        [self.authButton setTitle:@"Login" forState:UIControlStateNormal];
+        [self.inbutton setTitle:@"Try to Log In with your Facebook account" forState:UIControlStateNormal];
+        
+        [self.authButton setTitle:@"login" forState:UIControlStateNormal];
     }
 }
 

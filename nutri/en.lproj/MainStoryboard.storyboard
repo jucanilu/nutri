@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller - Nutri-->
         <scene sceneID="5">
             <objects>
                 <viewController modalTransitionStyle="flipHorizontal" id="2" customClass="ViewController" sceneMemberID="viewController">
@@ -12,27 +12,10 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKG-Fh-slN">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="126" id="sDe-DQ-x16"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title=" FB Log In" image="Icon@2x.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="authButtonAction:" destination="2" eventType="touchUpInside" id="g45-0y-vxA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szU-lV-nkk">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="107" id="Lfc-aV-WvF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="szU-lV-nkk">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="140" minY="95" maxX="12" maxY="0.0"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" backgroundImage="nutri.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -44,38 +27,42 @@
                                     <segue destination="auI-aY-Trj" kind="push" id="ep0-Y1-zrA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Welcome to nutri, share your diets." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="209" translatesAutoresizingMaskIntoConstraints="NO" id="oRP-kb-ZdO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HA8-MO-SHF">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="209" id="JoI-vR-blJ"/>
-                                    <constraint firstAttribute="height" constant="74" id="ZcM-sV-SVk"/>
+                                    <constraint firstAttribute="height" constant="60" id="rLh-35-KkQ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <size key="shadowOffset" width="1" height="1"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Log in">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="authButtonAction:" destination="2" eventType="touchUpInside" id="rvq-CL-Bj9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.074509806931018829" green="0.54117649793624878" blue="0.82352948188781738" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstItem="XKG-Fh-slN" firstAttribute="top" secondItem="oRP-kb-ZdO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="0mj-vf-iAe"/>
-                            <constraint firstItem="XKG-Fh-slN" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="72u-rF-qN5"/>
-                            <constraint firstAttribute="trailing" secondItem="XKG-Fh-slN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="7Yc-Vc-wOt"/>
-                            <constraint firstItem="oRP-kb-ZdO" firstAttribute="top" secondItem="3" secondAttribute="top" constant="160" id="O53-hU-gMp"/>
+                            <constraint firstAttribute="trailing" secondItem="HA8-MO-SHF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Qjw-Am-hXQ"/>
                             <constraint firstItem="szU-lV-nkk" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="ULp-sG-LEd"/>
                             <constraint firstItem="szU-lV-nkk" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="VyJ-aN-MPm"/>
+                            <constraint firstItem="szU-lV-nkk" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="ZJV-x2-h7l"/>
                             <constraint firstItem="szU-lV-nkk" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="ac7-T7-wr3"/>
-                            <constraint firstItem="oRP-kb-ZdO" firstAttribute="centerX" secondItem="XKG-Fh-slN" secondAttribute="centerX" type="default" id="kbd-ih-n7v"/>
+                            <constraint firstAttribute="bottom" secondItem="HA8-MO-SHF" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="biI-vS-kD3"/>
+                            <constraint firstItem="HA8-MO-SHF" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="zYC-gt-hSV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="6zh-yB-Sco"/>
+                    <navigationItem key="navigationItem" title="Nutri" id="6zh-yB-Sco"/>
                     <connections>
-                        <outlet property="authButton" destination="XKG-Fh-slN" id="y37-tk-rDO"/>
+                        <outlet property="inbutton" destination="szU-lV-nkk" id="R9e-8e-t2x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="731" y="-40"/>
+            <point key="canvasLocation" x="739" y="-28"/>
         </scene>
         <!--Table View Controller - Menu-->
         <scene sceneID="7AZ-Ah-DHw">
@@ -183,7 +170,6 @@
         <!--Table View Controller-->
         <scene sceneID="UZV-KQ-02g">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DDh-MM-m9w" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController modalTransitionStyle="flipHorizontal" id="Yg0-qA-Qzt" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ef6-v1-Zj4">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
@@ -250,6 +236,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="7X8-fY-qZ0"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DDh-MM-m9w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="731" y="-760"/>
         </scene>
@@ -363,7 +350,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icon@2x.png" width="114" height="114"/>
         <image name="diets.png" width="642" height="402"/>
         <image name="nutri.png" width="642" height="202"/>
         <image name="profile.png" width="642" height="402"/>
